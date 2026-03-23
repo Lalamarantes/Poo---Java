@@ -53,4 +53,13 @@ public class Cliente{
                 ", endereco='" + endereco + '\'' +
                 '}';
     }
+
+    public float calcularTotalPedido (){
+        //pra cada item pedido
+        float soma = 0;
+        for (ItemPedido ip : this.itensPedido){
+            soma += ip.getQtde() * ip.getProduto().getPreco();
+        }
+        return soma;
+    }
 }
