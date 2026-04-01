@@ -1,7 +1,7 @@
 public class Veiculo {
-    private String marca;
-    private String modelo;
-    private float velocidade;
+    protected String marca;
+    protected String modelo;
+    protected float velocidade;
 
     public Veiculo(String marca, String modelo, float velocidade) {
         this.marca = marca;
@@ -18,5 +18,14 @@ public class Veiculo {
 
     public void abastecer() {
         System.out.println("Veículo reabastecendo...");
+    }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", velocidade=" + velocidade +
+                '}';
     }
 }
