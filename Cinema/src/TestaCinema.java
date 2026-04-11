@@ -21,4 +21,4 @@ public class TestaCinema {
         // 5. Imprimindo resultado
         System.out.println(sessao1.toString());
     }
-}
+}]

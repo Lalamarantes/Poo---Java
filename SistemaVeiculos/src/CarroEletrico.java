@@ -7,6 +7,13 @@ public class CarroEletrico extends Veiculo {
     }
 
     @Override
+    public String toString() {
+        return "CarroEletrico{" +
+                "autonomiaBateria=" + autonomiaBateria +
+                '}';
+    }
+
+    @Override
     public void mover() {
         System.out.println("Carro elétrico movendo-se silenciosamente.");
     }
