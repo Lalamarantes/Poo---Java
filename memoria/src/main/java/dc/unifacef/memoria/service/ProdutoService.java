@@ -23,4 +23,22 @@ public class ProdutoService {
         this.produtos.add(produto);
         return produto;
     }
+
+    // remove um produto com id
+    public boolean remove(Long id){
+        return this.produtos.removeIf( p -> p.getId().equals(id));
+    }
+
+    //atualiza um produto por id
+    public Produto atualiza(Long id, Produto novo) {
+        novo.setId(id);
+        //percorrer pra atualizar o produto
+        for (int i = 0; i<this.produtos.size(); i++){
+            if (this.produtos.get(i).getId().equals(id)){
+                this.produtos.set(i, novo); //atualiza
+                return novo;
+            }
+        }
+        return null; // produto nao encontrado pra atualizar
+    }
 }

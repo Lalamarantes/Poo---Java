@@ -11,7 +11,7 @@ public class Produto {
     }
 
     public void setId(Long id) {
-        this.id = this.id;
+        this.id = id;
     }
 
     public String getNome() {
